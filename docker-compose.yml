@@ -1,0 +1,17 @@
+version: "3.9"
+
+services:
+  annex-api:
+    build: .
+    image: annex-api:latest
+    container_name: annex-api
+    command: "npm run start-reload"
+    ports:
+      - "4000:4000"
+      - "9229:9229"
+    working_dir: /app
+    volumes:
+      - ./src:/app/src
+    environment:
+      NODE_ENV: development
+ 
