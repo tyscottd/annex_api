@@ -3,7 +3,7 @@ const companyData = {
 		{
 			id: '1',
 			name: 'John Doe',
-			age: 32,
+			age: 33,
 			gender: 'Male',
 			hireDate: '2010-01-01',
 			department: 'Engineering'

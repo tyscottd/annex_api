@@ -1,28 +1,11 @@
 const typeDefs = `#graphql
-  input EmployeeInput {
+  input GroupInput {
     groupBy: String
   }
 
   input AvgInput {
     field: String!
   }
-
-  type EmployeeList {
-    employees: [Employee!]!
-	  total: Int!
-    avg(input: AvgInput!): Float!
-  }
-
-  type EmployeeGroup {
-    group: String!
-    employeeList(input: EmployeeInput): Employees!
-  }
-
-  type EmployeeGroupList {
-    groups: [EmployeeGroup!]!
-  }
-
-  union Employees = EmployeeList | EmployeeGroupList
 
   type Employee {
     id: ID!
@@ -34,8 +17,22 @@ const typeDefs = `#graphql
     department: String!
 	}
 
+  type User {
+    id: ID!
+    name: String!
+  }
+
+  union Iterable = Employee | User | GroupedList
+
+  type GroupedList {
+    group: String
+    list(input: GroupInput): [Iterable!]!
+    total: Int!
+    avg(input: AvgInput!): Float!
+  }
+
   type Query {
-    employees(input: EmployeeInput): Employees!
+    employees(input: GroupInput): [GroupedList!]!
   }
 `;
 
