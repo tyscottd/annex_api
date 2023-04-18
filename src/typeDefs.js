@@ -15,7 +15,7 @@ const typeDefs = `#graphql
 
   type EmployeeGroup {
     group: String!
-    employeeList: EmployeeList!
+    employeeList(input: EmployeeInput): Employees!
   }
 
   type EmployeeGroupList {
@@ -27,6 +27,7 @@ const typeDefs = `#graphql
   type Employee {
     id: ID!
     name: String!
+    gender: String!
     age: Int!
     hireDate: String!
     terminationDate: String

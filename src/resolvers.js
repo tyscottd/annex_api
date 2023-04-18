@@ -43,7 +43,26 @@ const resolvers = {
 	},
 	EmployeeGroup: {
 		group: (parent) => parent?.group,
-		employeeList: (parent) => parent,
+		employeeList: (parent, args) => {
+			const { groupBy } = args?.input || {};
+			if (groupBy) {
+				const groups = parent.employees.reduce((acc, employee) => {
+					const group = employee[groupBy];
+					if (!acc[group]) {
+						acc[group] = [];
+					}
+					acc[group].push(employee);
+					return acc;
+				}, {});
+
+				const employees = Object.entries(groups).map(([group, employees]) => ({
+					group,
+					employees,
+				}));
+				return employees;
+			}
+			return parent;
+		},
 	},
 	Employees: {
 		__resolveType: (parent) => {
