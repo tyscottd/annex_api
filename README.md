@@ -2,7 +2,7 @@
 
 - Run `docker-compose up` to start the server
 - Go to `http://localhost:4000/` to interact with the API
-	- This can be done through Postman, Insomnia, or the browser
+	- This can be done through Postman, Insomnia, or the browser. No authentication is necessary.
 
 ## Description
 
