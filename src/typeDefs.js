@@ -3,7 +3,7 @@ const typeDefs = `#graphql
     groupBy: String
   }
 
-  input AvgInput {
+  input AggregateInput {
     field: String!
   }
 
@@ -28,7 +28,8 @@ const typeDefs = `#graphql
     group: String
     list(input: GroupInput): [Iterable!]!
     total: Int!
-    avg(input: AvgInput!): Float!
+    avg(input: AggregateInput!): Float!
+    sum(input: AggregateInput!): Float!
   }
 
   type Query {

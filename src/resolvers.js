@@ -41,6 +41,16 @@ const resolvers = {
 			}, 0);
 			return sum / list.length;
 		},
+		sum: (parent, args) => {
+			const list = parent?.list;
+			const { field } = args.input;
+			return list.reduce((acc, listItem) => {
+				if (typeof listItem[field] !== 'number') {
+					throw new Error(`Field ${field} is not a number`);
+				}
+				return acc + listItem[field];
+			}, 0);
+		},
 		list: (parent, args) => {
 			const { groupBy } = args?.input || {};
 			let list = parent.list;
@@ -54,7 +64,7 @@ const resolvers = {
 		__resolveType: (parent, args) => {
 			// TODO: Account for other iterable types
 			if (parent?.group) {
-				return 'GroupedList';
+				return 'GroupedList'; 
 			}
 			return 'Employee';
 		},
