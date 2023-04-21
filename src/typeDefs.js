@@ -22,7 +22,12 @@ const typeDefs = `#graphql
     name: String!
   }
 
-  union Iterable = Employee | User | GroupedList
+  type Turnover {
+    date: String!
+    type: String!
+  }
+
+  union Iterable = Employee | User | Turnover | GroupedList
 
   type GroupedList {
     group: String
@@ -34,6 +39,7 @@ const typeDefs = `#graphql
 
   type Query {
     employees(input: GroupInput): [GroupedList!]!
+    turnover(input: GroupInput): [GroupedList!]!
   }
 `;
 

@@ -32,7 +32,29 @@ const companyData = {
 			hireDate: '2015-05-13',
 			department: 'Engineering'
 		},
-	]
+	],
+	turnover: [
+		{
+			date: '2010-01-01',
+			type: 'Voluntary',
+		},
+		{
+			date: '2010-01-01',
+			type: 'Involuntary',
+		},
+		{
+			date: '2010-01-01',
+			type: 'Voluntary',
+		},
+		{
+			date: '2010-01-01',
+			type: 'Involuntary',
+		},
+		{
+			date: '2010-02-01',
+			type: 'Voluntary',
+		}
+	],
 }
 
 export default companyData;

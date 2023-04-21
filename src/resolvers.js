@@ -27,6 +27,15 @@ const resolvers = {
 
 			return [{ list: employees }];
 		},
+		turnover: (parent, args) => {
+			const { groupBy } = args?.input || {};
+			let turnover = companyData.turnover;
+			if (groupBy) {
+				return groupList(turnover, groupBy);
+			}
+
+			return [{ list: turnover }];
+		},
 	},
 	GroupedList: {
 		total: (parent) => parent.list.length,
@@ -66,7 +75,12 @@ const resolvers = {
 			if (parent?.group) {
 				return 'GroupedList'; 
 			}
-			return 'Employee';
+
+			if (parent?.id) {
+				return 'Employee';
+			}
+			
+			return 'Turnover';
 		},
 	},
 }
