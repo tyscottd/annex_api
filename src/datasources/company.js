@@ -1,7 +1,11 @@
 const companyData = {
 	employees: [
 		{
+			id: 1,
+			name: 'John Doe',
 			age: 20,
+			hireDate: '2020-01-01',
+			terminationDate: null,
 			ethnicity: 'White',
 			gender: 'Male',
 			veteranStatus: 'No Service',
@@ -12,7 +16,11 @@ const companyData = {
 			jobTitle: 'Sales Onboarder',
 		},
 		{
+			id: 2,
+			name: 'Jane Doe',
 			age: 44,
+			hireDate: '2010-01-01',
+			terminationDate: '2020-01-01',
 			ethnicity: 'Asian',
 			gender: 'Female',
 			veteranStatus: 'Retired',
@@ -23,9 +31,13 @@ const companyData = {
 			jobTitle: 'Site Reliability Engineer',
 		},
 		{
+			id: 3,
+			name: 'John Smith',
 			age: 17,
+			hireDate: '2020-01-01',
+			terminationDate: null,
 			ethnicity: 'Hispanic',
-			gender: 'Female',
+			gender: 'Male',
 			veteranStatus: 'No Service',
 			department: 'Engineering',
 			division: 'Operations',
@@ -34,7 +46,11 @@ const companyData = {
 			jobTitle: 'Site Reliability Engineer',
 		},
 		{
+			id: 4,
+			name: 'Jane Smith',
 			age: 99,
+			hireDate: '2020-01-01',
+			terminationDate: '2023-01-01',
 			ethnicity: 'Hispanic',
 			gender: 'Female',
 			veteranStatus: 'No Service',

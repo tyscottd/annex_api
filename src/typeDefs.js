@@ -41,9 +41,30 @@ const typeDefs = `#graphql
     sum(input: AggregateInput!): Float!
   }
 
+  type EmployeesMembers {
+    count: Int!
+
+    id: ID!
+    name: String!
+    gender: String!
+    age: Int!
+    hireDate: String!
+    terminationDate: String
+    department: String!
+    division: String!
+    jobTitle: String!
+    location: String!
+    employmentStatus: String!
+  }
+
+  type Result {
+    employees: EmployeesMembers!
+  }
+
   type Query {
     employees(input: GroupInput): [GroupedList!]!
     turnover(input: GroupInput): [GroupedList!]!
+    cube: [Result!]!
   }
 `;
 
