@@ -15,6 +15,10 @@ const typeDefs = `#graphql
     hireDate: String!
     terminationDate: String
     department: String!
+    division: String!
+    jobTitle: String!
+    location: String!
+    employmentStatus: String!
 	}
 
   type User {

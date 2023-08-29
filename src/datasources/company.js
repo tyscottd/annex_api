@@ -1,60 +1,50 @@
 const companyData = {
 	employees: [
 		{
-			id: '1',
-			name: 'John Doe',
-			age: 33,
+			age: 20,
+			ethnicity: 'White',
 			gender: 'Male',
-			hireDate: '2010-01-01',
-			department: 'Engineering'
+			veteranStatus: 'No Service',
+			department: 'Sales',
+			division: 'Onboarding',
+			employmentStatus: 'Part-Time',
+			location: 'Austin, TX',
+			jobTitle: 'Sales Onboarder',
 		},
 		{
-			id: '2',
-			name: 'Jane Doe',
-			age: 25,
+			age: 44,
+			ethnicity: 'Asian',
 			gender: 'Female',
-			hireDate: '2012-05-13',
-			department: 'Engineering'
+			veteranStatus: 'Retired',
+			department: 'Engineering',
+			division: 'Operations',
+			employmentStatus: 'Full Time',
+			location: 'SLC, UT',
+			jobTitle: 'Site Reliability Engineer',
 		},
 		{
-			id: '3',
-			name: 'Sammy Doe',
-			age: 43,
-			gender: 'Male',
-			hireDate: '2001-05-13',
-			department: 'Sales'
-		},
-		{
-			id: '4',
-			name: 'Sally Doe',
-			age: 21,
+			age: 17,
+			ethnicity: 'Hispanic',
 			gender: 'Female',
-			hireDate: '2015-05-13',
-			department: 'Engineering'
-		},
-	],
-	turnover: [
-		{
-			date: '2010-01-01',
-			type: 'Voluntary',
+			veteranStatus: 'No Service',
+			department: 'Engineering',
+			division: 'Operations',
+			employmentStatus: 'Full Time',
+			location: 'SLC, UT',
+			jobTitle: 'Site Reliability Engineer',
 		},
 		{
-			date: '2010-01-01',
-			type: 'Involuntary',
+			age: 99,
+			ethnicity: 'Hispanic',
+			gender: 'Female',
+			veteranStatus: 'No Service',
+			department: 'Engineering',
+			division: 'Development',
+			employmentStatus: 'Full Time',
+			location: 'SLC, UT',
+			jobTitle: 'Software Engineer',
 		},
-		{
-			date: '2010-01-01',
-			type: 'Voluntary',
-		},
-		{
-			date: '2010-01-01',
-			type: 'Involuntary',
-		},
-		{
-			date: '2010-02-01',
-			type: 'Voluntary',
-		}
-	],
+	]
 }
 
 export default companyData;
